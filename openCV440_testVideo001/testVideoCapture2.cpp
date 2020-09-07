@@ -32,6 +32,11 @@ int testVideoCapture2() {
 	writer.open("CloneVideo2.mp4", fourcc, fps, cv::Size(width, height));
 	cv::Mat image;// 画像を格納するオブジェクトを宣言する
 
+
+	// display string
+	//cv::Mat dst;
+	//dst = image.clone();
+	
 	int numFrame = 0;
 
 	while (1) {
@@ -44,9 +49,21 @@ int testVideoCapture2() {
 
 		if (image.empty() == true) break; // 画像が読み込めなかったとき、無限ループを抜ける
 
-		// add rectagnles
+		// display rectagnles
 		cv::Rect rect(numFrame,numFrame,50,50);  // (x, y, width, height)
 		rectangle(image, rect, cv::Scalar(255,0,0), -1, cv::LINE_4); // (Blue,Green,Red)
+
+		// display string
+		cv::putText(
+			image,
+			std::to_string(numFrame),
+			cv::Point(100,100),
+			cv::FONT_HERSHEY_SIMPLEX,
+			2., //font size
+			cv::Scalar(0, 0, 255),//color(Blue,Green,Red)
+			2  // font thickness
+		);
+
 
 		cv::imshow("showing", image); // ウィンドウに動画を表示する
 		writer << image;  // 画像 image を動画ファイルへ書き出す
