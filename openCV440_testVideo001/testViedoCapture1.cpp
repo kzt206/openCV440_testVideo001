@@ -1,6 +1,8 @@
 #include <opencv2/opencv.hpp>
 #include <iostream>
 
+#include <chrono>
+#include <thread>
 
 
 int testVideoCapture1() {
@@ -44,7 +46,8 @@ int testVideoCapture1() {
 		cv::imshow("showing", image); // ウィンドウに動画を表示する
 		writer << image;  // 画像 image を動画ファイルへ書き出す
 		if (cv::waitKey(1) == 'q') break; //qを押すと終了
-
+		
+		//std::this_thread::sleep_for(std::chrono::milliseconds(50));
 	}
 
 
