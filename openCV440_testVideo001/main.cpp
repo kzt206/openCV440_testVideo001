@@ -25,10 +25,10 @@ int main(void)
 	writer.open("CloneVideo.mp4", fourcc, fps, cv::Size(width, height));
 	cv::Mat image;// 画像を格納するオブジェクトを宣言する
 
-	int numFrame = 0;
+	//int numFrame = 0;
 
 	while (1) {
-		numFrame++;
+		//numFrame++;
 		
 		video >> image; // videoからimageへ1フレームを取り込む
 
