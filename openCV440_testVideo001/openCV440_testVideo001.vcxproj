@@ -152,6 +152,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="testDetectFace1.cpp" />
     <ClCompile Include="testVideoCapture2.cpp" />
     <ClCompile Include="testViedoCapture1.cpp" />
   </ItemGroup>
