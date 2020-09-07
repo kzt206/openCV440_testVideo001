@@ -29,7 +29,7 @@ int testVideoCapture2() {
 
 	//fps /= 6;
 
-	writer.open("CloneVideo2.mp4", fourcc, fps, cv::Size(width, height));
+	writer.open("CloneVideo2b.mp4", fourcc, fps, cv::Size(width, height));
 	cv::Mat image;// 画像を格納するオブジェクトを宣言する
 
 
@@ -57,6 +57,7 @@ int testVideoCapture2() {
 		cv::putText(
 			image,
 			std::to_string(numFrame),
+		//	std::to_string((int)video.get(cv::CAP_PROP_FRAME_COUNT)),
 			cv::Point(100,100),
 			cv::FONT_HERSHEY_SIMPLEX,
 			2., //font size

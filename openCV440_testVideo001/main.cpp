@@ -7,10 +7,10 @@ int testDetectFace1();
 
 int main(void)
 {
-	//testVideoCapture2();
+	testVideoCapture2();
 	//system("wgnuplot -persist setting.plt");
 
-	testDetectFace1();
+	//testDetectFace1();
 
 	return 0;
 }
