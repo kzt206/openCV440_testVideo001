@@ -2,11 +2,11 @@
 #include <iostream>
 
 int  testVideoCapture1();
-
+int  testVideoCapture2();
 
 int main(void)
 {
-	testVideoCapture1();
+	testVideoCapture2();
 
 	return 0;
 }
