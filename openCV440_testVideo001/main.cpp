@@ -6,7 +6,8 @@ int  testVideoCapture2();
 
 int main(void)
 {
-	testVideoCapture2();
+	//testVideoCapture2();
+	system("wgnuplot -persist setting.plt");
 
 	return 0;
 }
