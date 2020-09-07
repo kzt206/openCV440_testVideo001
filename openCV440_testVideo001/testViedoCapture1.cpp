@@ -1,8 +1,8 @@
 #include <opencv2/opencv.hpp>
 #include <iostream>
 
-#include <chrono>
-#include <thread>
+//#include <chrono>
+//#include <thread>
 
 
 int testVideoCapture1() {
